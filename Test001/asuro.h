@@ -6,9 +6,9 @@
 *
 * Ver.     Date         Author           Comments
 * -------  ----------   --------------   ------------------------------
-* 1.00	   14.08.2003   Jan Grewe		 build
+* 1.00       14.08.2003   Jan Grewe         build
 * 2.00     14.10.2003   Jan Grewe        LEFT_VEL, RIGHT_VEL -> MotorSpeed(unsigned char left_speed, unsigned char right_speed);
-*										 LeftRwd(),LeftFwd(),RightRwd(),RigthFwd() -> MotorDir(unsigned char left_dir, unsigned char right_dir);
+*                                         LeftRwd(),LeftFwd(),RightRwd(),RigthFwd() -> MotorDir(unsigned char left_dir, unsigned char right_dir);
 *                                        GREEN_ON,GREEN_OFF,RED_ON,RED_OFF -> StatusLED(unsigned char color);
 *                                        LED_RED_ON, LED_RED_OFF -> FrontLED(unsigned char color);
 *                                        Blink(unsigned char left, unsigned char right) -> BackLED(unsigned char left, unsigned char right);
@@ -33,14 +33,14 @@
 #include <avr/interrupt.h>
 #include <avr/signal.h>
 
-#define  FALSE	0
-#define  TRUE	1
+#define  FALSE    0
+#define  TRUE    1
 
 #define  OFF    0
 #define  ON     1
 
-#define GREEN	1
-#define RED		2
+#define GREEN    1
+#define RED        2
 #define YELLOW  3
 
 /* Init function Processor will be initalized to work correctly */
@@ -98,16 +98,16 @@ void Sleep(unsigned char timer36kHz);
 #define RED_LED_ON    PORTD |=  RED_LED
 #define RED_LED_OFF   PORTD &= ~RED_LED
 
-#define FWD		(1 << PB5) /* (1 << PD5) */
-#define RWD		(1 << PB4) /* (1 << PD4) */
-#define BREAK	0x00
-#define FREE	(1 << PB4) | (1 << PB5) /* (1 << PD4) | (1 << PD5)*/
+#define FWD        (1 << PB5) /* (1 << PD5) */
+#define RWD        (1 << PB4) /* (1 << PD4) */
+#define BREAK    0x00
+#define FREE    (1 << PB4) | (1 << PB5) /* (1 << PD4) | (1 << PD5)*/
 
 #define IRTX        (1 << PB3)
 #define GREEN_LED   (1 << PB0)
 #define RED_LED     (1 << PD2)
 
-#define PWM 	  (1 << PB1) | (1 << PB2)
+#define PWM       (1 << PB1) | (1 << PB2)
 #define RIGHT_DIR (1 << PB4) | (1 << PB5)
 #define LEFT_DIR  (1 << PD4) | (1 << PD5)
 
@@ -116,17 +116,17 @@ void Sleep(unsigned char timer36kHz);
 #define SWITCH_OFF PORTD &= ~SWITCHES
 
 #define BATTERIE  (1 << MUX0) | (1 << MUX2) //ADC5
-#define SWITCH    (1 << MUX2)							//ADC4
-#define IR_LEFT	  (1 << MUX0) | (1 << MUX1)	//ADC3
-#define IR_RIGHT  (1 << MUX1)							//ADC2
+#define SWITCH    (1 << MUX2)                            //ADC4
+#define IR_LEFT      (1 << MUX0) | (1 << MUX1)    //ADC3
+#define IR_RIGHT  (1 << MUX1)                            //ADC2
 #define FRONT_LED (1 << PD6)
 
-#define ODOMETRIE_LED 	  (1 << PD7)
+#define ODOMETRIE_LED       (1 << PD7)
 #define ODOMETRIE_LED_ON  PORTD |= ODOMETRIE_LED
 #define ODOMETRIE_LED_OFF PORTD &= ~ODOMETRIE_LED
 
-#define WHEEL_LEFT   (1 << MUX0)			//ADC1
-#define WHEEL_RIGHT  0					//ADC0
+#define WHEEL_LEFT   (1 << MUX0)            //ADC1
+#define WHEEL_RIGHT  0                    //ADC0
 
 #endif /* ASURO_H */
 

@@ -1,3 +1,7 @@
+#include "asuro.h"
+
+void delayms(int t);    /* Prototype */
+
 void act01(void)
 {
         StatusLED(GREEN);

@@ -8,7 +8,7 @@ int main(void)
 
     while(TRUE)
     {
-
+        act01();
     }
 
     return 0;

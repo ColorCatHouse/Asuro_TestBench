@@ -1,7 +1,6 @@
 #include "asuro.h"
 
 void delayms(int t);    /* Prototype */
-void ledtest(void);     /* Prototype */
 
 int main(void)
 {
@@ -9,17 +8,9 @@ int main(void)
 
     while(TRUE)
     {
-        StatusLED(GREEN);
-        BackLED(ON, OFF);
-        MotorDir(FWD, FWD);
-        MotorSpeed(100, 100);
-        delayms(500);
-        StatusLED(RED);
-        BackLED(OFF, ON);
-        MotorDir(RWD, RWD);
-        MotorSpeed(255, 255);
-        delayms(2000);
-    };
+
+    }
+
     return 0;
 }
 

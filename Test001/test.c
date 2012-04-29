@@ -1,5 +1,7 @@
 #include "asuro.h"
 
+/* It doesn't work now... ;-( */
+
 void delayms(int t);    /* Prototype */
 
 int main(void)
